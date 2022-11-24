@@ -64,6 +64,6 @@ nav{
 .btn{
 	background: #0000FF;
 	padding: 10px 30px;
-	border-radius: 3px;
+	/*border-radius: 3px;*/
 	cursor: pointer;
 }
