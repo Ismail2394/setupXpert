@@ -1,1 +1,36 @@
 @charset "ISO-8859-1";
+
+.footer{
+	
+	width:75%;
+	padding: 10px;
+	margin-left: auto;
+}
+
+.liste{
+	
+	padding: 15px;
+	margin: 50px;
+
+	
+}
+
+.liste li{
+	display: inline;
+	list-style-type: none;
+}
+
+.liste li a{
+	position: relative;
+	padding: 20px;
+	text-decoration: none;
+	
+}
+
+
+
+
+.main-liste{
+	
+	margin: 0;
+}
