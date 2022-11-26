@@ -4,27 +4,70 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-
-<script
-    src="https://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous">
+<title>Kontakt</title>
+<link rel="stylesheet" href="../CSS/kontakt.css" type="text/css">
+<script src="https://code.jquery.com/jquery-3.3.1.js"
+	integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	crossorigin="anonymous">
+	
 </script>
-<script> 
-$(function(){
-  $("#header").load("header.html"); 
-  $("#footer").load("footer.html"); 
-});
+<script>
+	$(function() {
+		$("#header").load("header.html");
+		$("#footer").load("footer.html");
+	});
 </script>
 </head>
 <body>
-<div id="header"></div>
+	<div id="header"></div>
+	<form id="kontakt" method="post" action="../ServletKontakt"
+		accept-charset="UTF-8">
+		<fieldset>
+			<legend>So erreichen Sie uns</legend>
+			<select name="anrede" size="0">
+				<option value="herr">Herr</option>
+				<option value="frau">Frau</option>
+			</select>
+			<div>
+				<label for="firstName">Vorname:</label> <input type="text"
+					name="firstName" id="fristName" placeholder="Ihr Vorname"
+					maxlength="25" required><span></span> <br> <label
+					for="lastName">Nachname:</label> <input type="text" name="lastName"
+					id="lastname" placeholder="Ihr Nachname" maxlength="25" required>
+				<span></span> <br> <label for="mail">Ihre E-Mail:</label> <input
+					type="email" name="email" id="email" placeholder="E-Mail-Adresse"
+					maxlength="25" required> <span></span>
+			</div>
+			<p>Bitte Produktgruppe wählen:</p>
+			<div id="checkbox">
+				<p>
+					<label for="productType">PC-Hardware</label> <input type="checkbox"
+						name="producType1" id="productType" value="PC-hardware"> <br>
+					<label for="productType">Notebooks</label><input type="checkbox"
+						name="producType2" id="productType" value="notebooks"> <br>
+					<label for="productType">Peripheriegeräte</label> <input
+						type="checkbox" name="producType3" id="productType"
+						value="PC-hardware">
+				</p>
+			</div>
+			<div>
+				<textarea id=" custmessage" name="custmessage" rows="5" cols="51"
+					placeholder="Teilen Sie uns hier bitte möglichst ausführlich Ihr Anliegen mit."
+					maxlength="255" required></textarea>
+				<span></span>
+			</div>
 
- 
-
-<div id="footer"></div>
-
+			<div>
+				<button type="submit" name="submit" value="submit">Absenden</button>
+				<button type="reset" name="reset" value="reset">Zurücksetzen</button>
+				<span></span>
+			</div>
+			<div id="duty">
+				<p>(*) = Pflichtfeld</p>
+			</div>
+		</fieldset>
+	</form>
+	<div id="footer"></div>
 
 </body>
 </html>

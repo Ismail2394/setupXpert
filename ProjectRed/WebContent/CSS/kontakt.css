@@ -1,0 +1,40 @@
+
+@charset "UTF-8";
+/*<!--Küspert, Stefan 26.11.22-->*/
+fieldset {
+	width: 30em;
+	border: solid 5px;
+	border-radius: 0px 50px 50px 0px;
+	vertical-align: center;
+}
+
+form div {
+	padding: 0.4em;
+}
+input[type='email']:valid+span::after {
+	color: green;
+	content: " ✓"
+}
+#checkbox {
+	border-width: thin;
+	border-style: solid;
+	text-align: left;
+}
+label {
+	min-width: 6em;
+	display: block;
+	text-align: left;
+	font: bolder;
+}
+legend {
+	background: gold;
+	text-align: center;
+}
+textarea:required+span:after{
+	color: red;
+	content: " *";
+}
+input:required+span::after {
+	color: red;
+	content: " *";
+}
