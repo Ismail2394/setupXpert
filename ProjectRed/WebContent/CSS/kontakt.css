@@ -6,6 +6,7 @@ fieldset {
 	border: solid 5px;
 	border-radius: 0px 50px 50px 0px;
 	vertical-align: center;
+	margin: auto;
 }
 
 form div {
