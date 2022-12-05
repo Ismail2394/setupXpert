@@ -24,10 +24,12 @@
 		accept-charset="UTF-8">
 		<fieldset>
 			<legend>So erreichen Sie uns</legend>
-			<select name="anrede" size="0">
-				<option value="herr">Herr</option>
-				<option value="frau">Frau</option>
-			</select>
+			<div id="anredeSelect">
+				<select name="anrede" size="0">
+					<option value="herr">Herr</option>
+					<option value="frau">Frau</option>
+				</select>
+			</div>
 			<div>
 				<label for="firstName">Vorname:</label> <input type="text"
 					name="firstName" id="firstName" placeholder="Ihr Vorname"
@@ -38,20 +40,20 @@
 					type="email" name="email" id="email" placeholder="E-Mail-Adresse"
 					maxlength="25" required> <span></span>
 			</div>
-			<p>Bitte betroffene Produktgruppe(n) wählen:</p>
 			<div id="checkbox">
+			<p>Bitte betroffene Produktgruppe(n) wählen:</p>
 				<p>
-					<label for="productType">PC-Hardware</label> <input type="checkbox"
-						name="producType1" id="productType1" value="PC-hardware"> <br>
-					<label for="productType">Notebooks</label><input type="checkbox"
-						name="producType2" id="productType2" value="notebooks"> <br>
-					<label for="productType">Peripheriegeräte</label> <input
-						type="checkbox" name="producType3" id="productType"
+					<label for="productType">PC-Hardware:</label> <input type="checkbox"
+						name="producType1" id="productType1" value="PC-hardware">
+					<br> <label for="productType">Notebooks:</label><input
+						type="checkbox" name="producType2" id="productType2"
+						value="notebooks"> <br> <label for="productType">Peripheriegeräte:</label>
+					<input type="checkbox" name="producType3" id="productType"
 						value="PC-hardware">
 				</p>
 			</div>
 			<div>
-				<textarea id=" custmessage" name="custmessage" rows="5" cols="51"
+				<textarea id=" custmessage" name="custmessage" rows="5" cols="51" 
 					placeholder="Teilen Sie uns hier bitte möglichst ausführlich Ihr Anliegen mit."
 					maxlength="255" required></textarea>
 				<span></span>
@@ -63,7 +65,7 @@
 				<span></span>
 			</div>
 			<div id="duty">
-				<p>(*) = Pflichtfeld</p>
+				<p>* = Pflichtfeld</p>
 			</div>
 		</fieldset>
 	</form>
