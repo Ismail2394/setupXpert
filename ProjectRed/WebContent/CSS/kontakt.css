@@ -1,4 +1,3 @@
-
 @charset "UTF-8";
 /*<!--Küspert, Stefan 26.11.22-->*/
 fieldset {
@@ -9,32 +8,57 @@ fieldset {
 	margin: auto;
 }
 
+#anredeSelect {
+	text-align: auto;
+	display: block;
+}
+
+#duty {
+	text-align: center;
+	color: red;
+	font-size: 0.6em;
+}
+
 form div {
 	padding: 0.4em;
 }
+
 input[type='email']:valid+span::after {
 	color: green;
 	content: " ✓"
 }
+
 #checkbox {
 	border-width: thin;
 	border-style: solid;
 	text-align: left;
+	color: blue;
 }
+
 label {
 	min-width: 6em;
 	display: block;
 	text-align: left;
 	font: bolder;
+	color: blue;
+	font-family: "poppins", sans-serif;
 }
+
 legend {
 	background: gold;
-	text-align: center;
+	color: blue;
+	border-radius: 0px 50px 50px 0px;
+	border: solid 5px;
+	border-color: black;
+	padding: 0.2em;
+	font-family: "poppins", sans-serif;
 }
-textarea:required+span:after{
+
+textarea:required+span:after {
 	color: red;
 	content: " *";
 }
+
 input:required+span::after {
 	color: red;
 	content: " *";
