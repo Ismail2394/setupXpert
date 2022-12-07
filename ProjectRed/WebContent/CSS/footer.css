@@ -15,8 +15,9 @@
 .push{
 	height:100px;
 	width:100%;
-	/*position: absolute;*/
+	position: absolute;
 	bottom: 10px;
+	padding-top: 15px;
 	left: 0;
 	right: 0;
 	text-align: center;
