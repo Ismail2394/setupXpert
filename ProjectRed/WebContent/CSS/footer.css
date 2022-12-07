@@ -2,24 +2,26 @@
 
 /*Caglayan, Ismail 24.11.22*/
 
-/*
 *{
 	margin: 0;
 	padding: 0;
 	font-family: "poppins", sans-serif;
 	box-sizing: border-box;
-	
 }
-*/
 
-.footer{
-	width:75%;
-	position: fixed;
-	bottom: 0;
+
+
+.footer,
+.push{
+	height:100px;
+	width:100%;
+	/*position: absolute;*/
+	bottom: 10px;
+	left: 0;
+	right: 0;
 	text-align: center;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	
+	/*left: 50%;*/
+	/*transform: translate(-50%, -50%);*/
 }
 
 .liste{
