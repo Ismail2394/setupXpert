@@ -1,0 +1,13 @@
+/*<!--Küspert, Stefan 12.12.22-->*/
+@charset "UTF-8";
+h1 {
+	text-align: center;
+	font-style: bold;
+	font-family: sans-serif;
+	color: blue;
+	border: solid 5px;
+	border-radius: 0px 50px 50px 0px;
+}
+h2{
+	color: aqua;
+}

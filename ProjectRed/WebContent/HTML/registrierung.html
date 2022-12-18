@@ -1,0 +1,88 @@
+<!--Küspert, Stefan 11.12.22-->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Registrierung</title>
+<link rel="stylesheet" href="../CSS/form.css" type="text/css">
+<script src="https://code.jquery.com/jquery-3.3.1.js"
+	integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	crossorigin="anonymous">
+	
+</script>
+<script>
+	$(function() {
+		$("#header").load("header.html");
+		$("#footer").load("footer.html");
+	});
+</script>
+</head>
+<body>
+	<div id="header"></div>
+	<div id="body">
+		<form id="registrierung" method="post"
+			action="../Servlet01registrierung" accept-charset="UTF-8">
+			<fieldset>
+				<legend>Registrierung</legend>
+				<div id="anredeSelect">
+					<select name="geschlecht" size="0">
+						<option value="herr">Herr</option>
+						<option value="frau">Frau</option>
+					</select>
+				</div>
+				<div>
+					<label for="firstName">Vorname:</label> <input type="text"
+						name="firstName" id="firstName" placeholder="Ihr Vorname"
+						maxlength="25" required><span></span> <br> <label
+						for="lastName">Nachname:</label> <input type="text"
+						name="lastName" id="lastname" placeholder="Ihr Nachname"
+						maxlength="25" required> <span></span>
+						<br> <label
+						for="birth">Geburtsdatum</label> <input type="date"
+						name="birth" id="birth" placeholder="Ihr Geburtsdatum"
+						required> <span></span>
+				</div>
+				<div id="anschrift">
+					<label for="street">Straße:</label> <input type="text"
+						name="street" id="straße" placeholder=" Bitte Straße eingeben"
+						maxlength="25" required> <span></span><label
+						for="streetNumber">Hausnummer:</label> <input type="text"
+						name="streetNumber" id="streetNumber"
+						placeholder="Ihre Hausnummer" maxlength="25" required><span></span><label
+						for="plz">Postleitzahl</label> <input type="number" name="plz"
+						id="plz" placeholder="Ihre Postleitzahl" maxlength="5" required><span></span>
+					<label for="place">Wohnort</label> <span></span><input
+						type="text" name="email" id="place" placeholder="Ihr Wohnort"
+						maxlength="5" required><span></span>
+				</div>
+				<div>
+					<label for="eMail">E-Mail:</label> <input type="email" name="eMail"
+						id="email" placeholder="E-Mail-Adresse" maxlength="25" required>
+					<span></span>
+				</div>
+				<div>
+					<label for="password">Passwort eingeben:</label> <input
+						type="password" name="password" id="pwd"
+						placeholder="Ihr Passwort" maxlength="25" required> <span></span>
+					<label for="passwordRepeat">Passwort wiederholen:</label> <input
+						type="password" name="passwordRepeat" id="pwdrep"
+						placeholder="Ihr Passwort wiederholen" maxlength="25" required>
+					<span></span>
+				</div>
+				<div>
+					<button type="submit" name="submit" value="submit">Absenden</button>
+					<button type="reset" name="reset" value="reset">Zurücksetzen</button>
+				</div>
+				<div id="duty">
+					<p>(*) = Pflichtfeld</p>
+				</div>
+			</fieldset>
+		</form>
+		<hr>
+		<footer>
+			<a href="04_startseite.html">Zur Startseite</a> | <a
+				href="05_profil.html">Zu meinem Profil</a>
+		</footer>
+</body>
+<div id="footer"></div>
+</html>
