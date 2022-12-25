@@ -56,7 +56,7 @@ public class kunde implements Serializable {
 	public String getOrt() {
 		return ort;
 	}
-	public void setOrt(String ort) {
+	public void setOrt(string ort) {
 		this.ort = ort;
 	}
 	public String getHausnummer() {

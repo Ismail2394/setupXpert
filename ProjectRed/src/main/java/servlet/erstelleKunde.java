@@ -22,8 +22,8 @@ import jakarta.servlet.http.HttpServletResponse;
 public class erstelleKunde extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	@Resource(lookup="java:jboss/datasources/setupXpert")
-	private DataSource ds;
+	@Resource(lookup="java:jboss/datasources/ProjectRedDBDS")
+	private projectreddb ds;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -58,7 +58,7 @@ public class erstelleKunde extends HttpServlet {
 	
 					ResultSet rs = pstmt.getGeneratedKeys();				
 						while (rs.next()) {
-							form.setId(rs.getLong(1));
+							form.seteMail(getServletInfo());;
 						}
 					
 				} catch (Exception ex) {
