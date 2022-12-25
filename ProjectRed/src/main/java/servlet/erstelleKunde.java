@@ -1,13 +1,27 @@
+package servlet;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import javax.sql.DataSource;
+
+import beans.kunde;
+import jakarta.annotation.Resource;
+import jakarta.resource.cci.ResultSet;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
 @WebServlet("/erstelleKunde")
 public class erstelleKunde extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Resource(lookup="java:jboss/datasources/ProjectRedDBDS")
-<<<<<<< HEAD
-	private projectreddb ds;
-=======
 	private DataSource ds;
->>>>>>> branch 'master' of https://github.com/Ismail2394/setupXpert.git
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -45,14 +59,6 @@ public class erstelleKunde extends HttpServlet {
 			    pstmt.setInt(10, form.getRolle());
 					pstmt.executeUpdate();
 	
-					ResultSet rs = pstmt.getGeneratedKeys();				
-						while (rs.next()) {
-<<<<<<< HEAD
-							form.seteMail(getServletInfo());;
-=======
-							form.setKunden_id(rs.getInt(1));
->>>>>>> branch 'master' of https://github.com/Ismail2394/setupXpert.git
-						}
 					
 				} catch (Exception ex) {
 					throw new ServletException(ex.getMessage());
