@@ -10,9 +10,8 @@
 }
 
 
-
-.footer,
-.push{
+.footer, .push{
+	
 	height:100px;
 	width:100%;
 	position: absolute;

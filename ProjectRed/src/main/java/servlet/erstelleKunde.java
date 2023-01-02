@@ -44,7 +44,7 @@ public class erstelleKunde extends HttpServlet {
 			
 			try (Connection con = ds.getConnection();
 					PreparedStatement pstmt = con.prepareStatement(
-							"INSERT INTO Kunde (KundenID, Vorname, Nachname, Strasse, HNr, PLZ, GebDatum, Geschlecht, EMail, Rolle) VALUES (?,?,?,?,?,?,?,?,?,?)", generatedKeys
+							"INSERT INTO Kunde (KundenID, Vorname, Nachname, Strasse, HNr, PLZ, GebDatum, Geschlecht, EMail, Rolle, passwort) VALUES (?,?,?,?,?,?,?,?,?,?,?)", generatedKeys
 							)){
                         
 				pstmt.setInt(1, form.getKunden_id());	
@@ -57,12 +57,15 @@ public class erstelleKunde extends HttpServlet {
 			    pstmt.setString(8, form.getGeschlecht());
 			    pstmt.setString(9, form.geteMail());
 			    pstmt.setInt(10, form.getRolle());
+			    pstmt.setString(11, form.getPasswort());
 					pstmt.executeUpdate();
 	
 					
 				} catch (Exception ex) {
 					throw new ServletException(ex.getMessage());
 				}
+		
+			
 			}
 		
 		
