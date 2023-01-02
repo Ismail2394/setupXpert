@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta http-equiv="content-type" content="text/html" charset="UTF-8">
 <title>Registrierung_JSP</title>
 </head>
 <body>
