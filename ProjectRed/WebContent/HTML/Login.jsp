@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Impressum_JSP</title>
+<title>Anmeldeformular</title>
 <link rel="stylesheet" href="../CSS/Login.css">
 </head>
 <body>

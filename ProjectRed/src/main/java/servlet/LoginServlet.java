@@ -31,9 +31,9 @@ public class LoginServlet extends HttpServlet {
 		//DataSource aus dem ServletContext abrufen
 		
         try (Connection conn = ds.getConnection()) {
-        	String query = "SELECT passwort FROM kunde WHERE EMail = ?";
+        	String query = "SELECT passwort FROM kunde WHERE email = ?";
             PreparedStatement pst = conn.prepareStatement(query);
-            pst.setString(1, enteredEmail);
+            pst.setString(1, "'" + enteredEmail + "'");
       
             ResultSet rs = (ResultSet) pst.executeQuery();
             if (rs.next()) {
@@ -41,7 +41,7 @@ public class LoginServlet extends HttpServlet {
                 String storedPassword = rs.getString("passwort");
                 //Passwort vergleichen
                
-                if (storedPassword.equals(enteredPasswort)) {
+                if (storedPassword == enteredPasswort) {
                     //Session für den angemeldeten Benutzer erstellen
                     HttpSession session = request.getSession();
                     session.setAttribute("email", enteredEmail);
