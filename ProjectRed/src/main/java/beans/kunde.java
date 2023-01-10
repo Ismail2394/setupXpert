@@ -18,21 +18,21 @@ public class kunde implements Serializable {
 	private String nachname;
 	
 	public int getKunden_id() {
-		kunden_id=123456789;
+		kunden_id=12;
 		return kunden_id;
 	}
 	public void setKunden_id(int kunden_id) {
 		this.kunden_id = kunden_id;
 	}
 	public String getPasswort() {
-		passwort="1";
+		passwort="test";
 		return passwort;
 	}
 	public void setPasswort(String passwort) {
 		this.passwort = passwort;
 	}
 	public String geteMail() {
-		eMail="1";
+		eMail="test@gmail.com";
 		return eMail;
 	}
 	public void seteMail(String eMail) {
