@@ -17,7 +17,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/erstelleKunde")
-public class erstelleKunde extends HttpServlet {
+public class erstelleKundeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Resource(lookup="java:jboss/datasources/ProjectRedDBDS")
@@ -44,7 +44,7 @@ public class erstelleKunde extends HttpServlet {
 			
 			try (Connection con = ds.getConnection();
 					PreparedStatement pstmt = con.prepareStatement(
-							"INSERT INTO Kunde (KundenID, Vorname, Nachname, Strasse, HNr, PLZ, GebDatum, Geschlecht, EMail, Rolle, passwort) VALUES (?,?,?,?,?,?,?,?,?,?,?)", generatedKeys
+							"INSERT INTO Kunde (KundenID,vorname,nachname,strasse,hausnummer,plz,email,rolle,geschlecht,passwort,gebDatum) VALUES (?,?,?,?,?,?,?,?,?,?,?)", generatedKeys
 							)){
                         
 				pstmt.setInt(1, form.getKunden_id());	
@@ -53,12 +53,12 @@ public class erstelleKunde extends HttpServlet {
 			 	 pstmt.setString(4, form.getStrasse()); 
 			    pstmt.setString(5, form.getHausnummer());
 			    pstmt.setString(6, form.getPlz());
-			    pstmt.setString(7, form.getGeburtsdatum());
-			    pstmt.setString(8, form.getGeschlecht());
-			    pstmt.setString(9, form.geteMail());
-			    pstmt.setInt(10, form.getRolle());
-			    pstmt.setString(11, form.getPasswort());
-					pstmt.executeUpdate();
+			    pstmt.setString(7, form.geteMail());
+			    pstmt.setInt(8, form.getRolle());
+			    pstmt.setString(9, form.getGeschlecht());
+			    pstmt.setString(10, form.getPasswort());
+			    pstmt.setString(11, form.getGeburtsdatum());
+			  pstmt.executeUpdate();
 	
 					
 				} catch (Exception ex) {
