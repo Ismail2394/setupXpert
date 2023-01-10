@@ -8,7 +8,6 @@ import javax.sql.DataSource;
 
 import beans.kunde;
 import jakarta.annotation.Resource;
-import jakarta.resource.cci.ResultSet;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
