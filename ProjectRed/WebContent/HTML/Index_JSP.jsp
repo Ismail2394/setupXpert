@@ -7,8 +7,8 @@
 <title>Index_JSP</title>
 </head>
 <body>
-<%@ include file="header.html" %>
+
 <%@ include file="index.html" %>
-<%@ include file="footer.html" %>
+
 </body>
 </html>
