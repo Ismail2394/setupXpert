@@ -31,6 +31,18 @@ public class erstelleKundeServlet extends HttpServlet {
 
 		
 		
+		form.setVorname(request.getParameter("vorname"));
+		form.setNachname(request.getParameter("nachname"));
+		form.setStrasse(request.getParameter("strasse")); 
+		form.setHausnummer(request.getParameter("hausnummer")); 
+		form.setPlz(request.getParameter("plz")); 
+		form.seteMail(request.getParameter("email")); 
+		form.setRolle(request.getParameter("rolle")); 
+		form.setGeschlecht(request.getParameter("geschlecht"));
+		form.setPasswort(request.getParameter("passwort"));
+		form.setGeburtsdatum(request.getParameter("geburtsdatum"));
+		
+		
 		persist(form);
 		request.setAttribute("form", form);
 
@@ -54,7 +66,7 @@ public class erstelleKundeServlet extends HttpServlet {
 			    pstmt.setString(5, form.getHausnummer());
 			    pstmt.setString(6, form.getPlz());
 			    pstmt.setString(7, form.geteMail());
-			    pstmt.setInt(8, form.getRolle());
+			    pstmt.setString(8, "1");
 			    pstmt.setString(9, form.getGeschlecht());
 			    pstmt.setString(10, form.getPasswort());
 			    pstmt.setString(11, form.getGeburtsdatum());
