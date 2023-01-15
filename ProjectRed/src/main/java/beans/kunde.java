@@ -11,7 +11,7 @@ public class kunde implements Serializable {
 	private String geschlecht;
 	private String geburtsdatum;
 	private String plz;
-	private int rolle;
+	private String rolle;
 	private String hausnummer;
 	private String strasse;
 	private String vorname;
@@ -59,12 +59,14 @@ public class kunde implements Serializable {
 	public void setPlz(String plz) {
 		this.plz = plz;
 	}
-	public int getRolle() {
+	public String getRolle() {
 		
 		return rolle;
 	}
-	public void setRolle(int rolle) {
-		this.rolle = rolle;
+	
+	public void setRolle(String string) {
+		rolle = "1";
+		this.rolle = string;
 	}
 	public String getHausnummer() {
 		
