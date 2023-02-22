@@ -77,5 +77,16 @@ body {
 transform: translateY(0) scale(1.2);
 }
 
+.flex-table{
+	justify-content: center;
+	display: flex;
+	flex-flow: row wrap;
+	border-left: solid 1px;
+	transition: 0.5s;
+}
 
-
+h2.ueberschrift {
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 50px;
+}
