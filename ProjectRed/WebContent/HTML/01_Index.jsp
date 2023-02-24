@@ -4,11 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>AGB_JSP</title>
+<link rel="stylesheet" type="text/css" href="../CSS/gesamt.css">
+<title>Index_JSP</title>
 </head>
 <body>
-<%@ include file="header.html" %>
-<%@ include file="agb.html" %>
-<%@ include file="footer.html" %>
+
+<%@ include file="00_header.html" %>
+
+<%@ include file="00_footer.html" %>
+
 </body>
 </html>
