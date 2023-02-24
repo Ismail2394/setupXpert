@@ -5,13 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="../CSS/gesamt.css">
-<title>AGB_JSP</title>
+<title>AGB</title>
 </head>
 <body>
+<%@ include file="00_header.html" %>
 
-<%@ include file="header.html" %>
-
-<header> <h1>Allgemeine Geschäftsbedingungen setupXpert.com</h1></header>
+<h1>Allgemeine Geschäftsbedingungen setupXpert.com</h1>
 	<h2>§ 1 Grundlegende Bestimmungen</h2>
 	<p>1) Die nachstehenden Geschäftsbedingungen gelten für Verträge
 		die über setupXpert.com geschlossen werden. Soweit nicht anders
@@ -118,6 +117,6 @@
 			rel="nofollow">Website-Tutor.com</a> erstellt.
 	</p>
 
-<%@ include file="footer.html" %>
+<%@ include file="00_footer.html" %>
 </body>
 </html>
