@@ -10,6 +10,7 @@
 
 <body>
 <%@ include file="00_headerAdmin.html" %>
+
 <h2 class="ueberschrift">Administration</h2>
 
 <div class="flex-table">

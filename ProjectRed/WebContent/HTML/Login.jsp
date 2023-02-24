@@ -6,10 +6,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Anmeldeformular</title>
-<link rel="stylesheet" href="../CSS/Login.css">
+<link rel="stylesheet" href="../CSS/gesamt.css">
 </head>
 <body>
-<%@ include file="header.html" %>
+<%@ include file="00_header.html" %>
 
 	<div class="box">
         <form method="post" action="../loginServlet">
@@ -69,6 +69,6 @@
 
 -->
 
-<%@ include file="footer.html" %>
+<%@ include file="00_footer.html" %>
 </body>
 </html>
