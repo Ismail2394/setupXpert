@@ -9,7 +9,7 @@
 </head>
 <body>
 <%@ include file="00_header.html" %>
-
+<div class=body>
 <h1>Allgemeine Geschäftsbedingungen setupXpert.com</h1>
 	<h2>§ 1 Grundlegende Bestimmungen</h2>
 	<p>1) Die nachstehenden Geschäftsbedingungen gelten für Verträge
@@ -116,7 +116,7 @@
 			href="http://website-tutor.com/agb-muster/" target="_blank"
 			rel="nofollow">Website-Tutor.com</a> erstellt.
 	</p>
-
+</div>
 <%@ include file="00_footer.html" %>
 </body>
 </html>

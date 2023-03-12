@@ -10,7 +10,7 @@
 </head>
 <body>
 <%@ include file="00_header.html" %>
-
+<div class=body>
 	<div class="box">
         <form method="post" action="../loginServlet">
             <h2>Anmelden</h2>
@@ -35,6 +35,7 @@
     </div>
     <div>
   
+</div>
 </div>
 <%
         String storedPassword = (String) request.getAttribute("storedPassword");
