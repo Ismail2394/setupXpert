@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="../CSS/textOnly.css">
+<link rel="stylesheet" type="text/css" href="../CSS/gesamt.css">
 <title>Impressum</title>
 </head>
 <body>

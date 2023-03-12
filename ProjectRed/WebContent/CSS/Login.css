@@ -6,16 +6,17 @@
 	padding: 0;
 	box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-}*/
+}
 body 
 {
 	display: flex;
+	margin: auto;
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
 	flex-direction: column;
 	
-}
+}*/
 .box 
 {
 	position: relative;
@@ -24,6 +25,7 @@ body
 	background: transparent;
 	border-radius: 8px;
 	overflow: hidden;
+	margin: auto;
 }
 
 form 
