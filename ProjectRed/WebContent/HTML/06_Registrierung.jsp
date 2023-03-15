@@ -32,17 +32,18 @@
 						name="geburtsdatum" id="birth" placeholder="Ihr Geburtsdatum"
 						required> <span></span>
 				</div>
-				<div id="anschrift">
-					<label for="street">Straße:</label> <input type="text"
-						name="strasse" id="straße" placeholder=" Bitte Straße eingeben"
-						maxlength="25" required> <span></span>
+				<div id="anschrift"> <label
+						for="street">Straße:</label> <input type="text" name="strasse"
+						id="straße" placeholder=" Bitte Straße eingeben" maxlength="25"
+						required> <span></span><label for="streetNumber">Hausnummer:</label>
+					<input type="text" name="streetNumber" id="streetNumber"
+						placeholder="Ihre Hausnummer" maxlength="25" required><span></span><label
+						for="plz">Postleitzahl</label> <input type="number" name="plz"
+						id="plz" placeholder="Ihre Postleitzahl" maxlength="5" required><span></span>
+					<label for="place">Wohnort</label> <span></span><input type="text"
+						name="email" id="place" placeholder="Ihr Wohnort" maxlength="5"
+						required><span></span>
 						
-						<label	for="streetNumber">Hausnummer:</label> <input type="text"
-						name="hausnummer" id="streetNumber" placeholder="Ihre Hausnummer"
-						maxlength="25" required><span></span>
-						<label for="plz">Postleitzahl</label><input type="number" name="plz" id="plz"
-						placeholder="Postleitzahl">
-						<div id="anschrift"> 
 						
 					
 				</div>

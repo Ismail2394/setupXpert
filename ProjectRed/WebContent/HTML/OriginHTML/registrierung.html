@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div id="body">
-		<form id="registrierung" method="post" action="../ErstelleKundeServlet"
+		<form id="registrierung" method="post" action="../erstelleKunde"
 			accept-charset="UTF-8">
 			<fieldset>
 				<legend>Registrierung</legend>
@@ -21,36 +21,16 @@
 				</div>
 				<div>
 					<label for="firstName">Vorname:</label> <input type="text"
-						name="vorname" id="vorname" placeholder="Ihr Vorname"
+						name="vorname" id="firstName" placeholder="Ihr Vorname"
 						maxlength="25" required><span></span> <br> <label
 						for="lastName">Nachname:</label> <input type="text"
-						name="nachname" id="nachname" placeholder="Ihr Nachname"
+						name="nachname" id="lastname" placeholder="Ihr Nachname"
 						maxlength="25" required> <span></span> <br> <label
 						for="birth">Geburtsdatum</label> <input type="date"
-						name="geburtsdatum" id="geburtsdatum" placeholder="Ihr Geburtsdatum"
+						name="geburtsdatum" id="birth" placeholder="Ihr Geburtsdatum"
 						required> <span></span>
 				</div>
-				<div id="anschrift">
-					<label for="street">Straße:</label> <input type="text"
-<<<<<<< HEAD
-						name="strasse" id="strasse" placeholder=" Bitte Straße eingeben"
-						maxlength="25" required> <span></span><label
-						for="streetNumber">Hausnummer:</label> <input type="text"
-						name="hausnummer" id="hausnummer" placeholder="Ihre Hausnummer"
-						maxlength="25" required><span></span><label for="plz">Postleitzahl</label>
-					<input type="number" name="plz" id="plz"
-=======
-						name="strasse" id="straße" placeholder=" Bitte Straße eingeben"
-						maxlength="25" required> <span></span>
-						
-						<label	for="streetNumber">Hausnummer:</label> <input type="text"
-						name="hausnummer" id="streetNumber" placeholder="Ihre Hausnummer"
-						maxlength="25" required><span></span>
-						<label for="plz">Postleitzahl</label><input type="number" name="plz" id="plz"
->>>>>>> branch 'master' of https://github.com/Ismail2394/setupXpert
-						placeholder="I
-<<<<<<< HEAD
-						<div id="anschrift"> <label
+				<div id="anschrift"> <label
 						for="street">Straße:</label> <input type="text" name="strasse"
 						id="straße" placeholder=" Bitte Straße eingeben" maxlength="25"
 						required> <span></span><label for="streetNumber">Hausnummer:</label>
@@ -61,24 +41,18 @@
 					<label for="place">Wohnort</label> <span></span><input type="text"
 						name="email" id="place" placeholder="Ihr Wohnort" maxlength="5"
 						required><span></span>
-=======
-						<div id="anschrift"> 
+						
 						
 					
->>>>>>> branch 'master' of https://github.com/Ismail2394/setupXpert
 				</div>
 				<div>
-<<<<<<< HEAD
-					<label for="email">E-Mail:</label> <input type="email" name="email"
-=======
 					<label for="eMail">E-Mail:</label> <input type="email" name="email"
->>>>>>> branch 'master' of https://github.com/Ismail2394/setupXpert
 						id="email" placeholder="E-Mail-Adresse" maxlength="25" required>
 					<span></span>
 				</div>
 				<div>
 					<label for="passwort">Passwort eingeben:</label> <input
-						type="password" name="passwort" id="passwort"
+						type="passwort" name="passwort" id="pwd"
 						placeholder="Ihr Passwort" maxlength="25" required> <span></span>
 					<label for="passwordRepeat">Passwort wiederholen:</label> <input
 						type="password" name="passwordRepeat" id="pwd"
