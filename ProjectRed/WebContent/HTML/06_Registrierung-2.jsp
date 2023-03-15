@@ -41,7 +41,7 @@
 						name="hausnummer" id="streetNumber" placeholder="Ihre Hausnummer"
 						maxlength="25" required><span></span>
 						<label for="plz">Postleitzahl</label><input type="number" name="plz" id="plz"
-						placeholder="I
+						placeholder="PLZ eingeben">
 						<div id="anschrift"> 
 						
 					
