@@ -1,3 +1,4 @@
+//Caglayan, Ismail 24.11.22
 package servlet;
 
 import java.sql.Connection;
@@ -24,7 +25,7 @@ public class ArtikelListeServlet extends HttpServlet {
         try {
             Connection conn = ds.getConnection();
             conn.close();
-            System.out.println("DataSource initialized successfully!");
+            System.out.println("Datenbank erfolgreich initialisiert.");
         } catch (SQLException e) {
             e.printStackTrace();
         }

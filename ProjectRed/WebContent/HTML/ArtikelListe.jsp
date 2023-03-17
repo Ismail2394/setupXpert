@@ -1,3 +1,4 @@
+<!--Caglayan, Ismail 24.11.22-->
 <%@ page import="java.sql.*" %>
 <%@ page import="javax.naming.InitialContext" %>
 <%@ page import="javax.sql.DataSource" %>
@@ -5,9 +6,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<meta charset="UTF-8">
 	<title>Artikel Liste</title>
 	<link rel="stylesheet" href="../CSS/gesamt.css">
+		<link rel="stylesheet" href="../CSS/ArtikelListe.css">
+	
 </head>
 <body>
 <%@ include file="00_header.html" %>
@@ -23,24 +27,26 @@
 		DataSource ds = (DataSource) cxt.lookup("java:jboss/datasources/ProjectRedDBDS");
 		conn = ds.getConnection();
 
-		// Check if form was submitted
+		
 		if (request.getMethod().equalsIgnoreCase("post")) {
-			// Get values from form
+			
 			String name = request.getParameter("name");
 			double price = Double.parseDouble(request.getParameter("price"));
 			int menge = Integer.parseInt(request.getParameter("menge"));
 			String beschreibung = request.getParameter("beschreibung");
+			String ArtikelBild = request.getParameter("ArtikelBild");
 
-			// Insert new product into database
-			stmt = conn.prepareStatement("INSERT INTO products (proName, proPrice, proMenge, proDesc) VALUES (?, ?, ?, ?)");
+			
+			stmt = conn.prepareStatement("INSERT INTO products (proName, proPrice, proMenge, proDesc, proPic) VALUES (?, ?, ?, ?, ?)");
 			stmt.setString(1, name);
 			stmt.setDouble(2, price);
 			stmt.setInt(3, menge);
 			stmt.setString(4, beschreibung);
+			stmt.setString(5, ArtikelBild);
 			stmt.executeUpdate();
 		}
 
-		// Retrieve products from database
+		
 		stmt = conn.prepareStatement("SELECT * FROM products");
 		rs = stmt.executeQuery();
 	%>
@@ -49,29 +55,40 @@
 			<thead>
 				<tr>
 					<th>ID</th>
-					<th>Name</th>
-					<th>Price</th>
+					<th>Artikel</th>
+					<th>Preis</th>
 					<th>Menge</th>
 					<th>Beschreibung</th>
+					<th>Bildpfad</th>
 				</tr>
 			</thead>
 			<tbody>
 				<form action="ArtikelListe.jsp" method="post">
-					<label for="name">ArtikelName:</label>
-					<input type="text" id="name" name="name" required>
-
-					<label for="price">Preis:</label>
-					<input type="number" id="price" name="price" step="0.01" required>
-
-					<label for="menge">Menge:</label>
-					<input type="number" id="menge" name="menge" required>
-
-					<label for="beschreibung">Beschreibung:</label>
-					<textarea id="beschreibung" name="beschreibung" rows="4" cols="50"></
-					</textarea>
-
-					<input type="submit" value="Submit">
+					<div class="input-container">
+						<div class="input-field">
+							<label for="name">ArtikelName:</label>
+							<input type="text" id="name" name="name" required>
+						</div>
+						<div class="input-field">
+							<label for="price">Preis:</label>
+							<input type="number" id="price" name="price" step="0.01" required>
+						</div>
+						<div class="input-field">
+							<label for="menge">Menge:</label>
+							<input type="number" id="menge" name="menge" required>
+						</div>
+						<div class="input-field">
+							<label for="beschreibung">Beschreibung:</label>
+							<textarea id="beschreibung" name="beschreibung" rows="4" cols="50"></textarea>
+						</div>
+						<div class="input-field">
+							<label for="ArtikelBild">ArtikelBild:</label>
+							  <input type="file" id="myFile" name="filename">
+						</div>
+					</div>
+					<input type="submit" value="Hinzufügen">
 				</form>
+
 
 				<%
 				while (rs.next()) {
@@ -80,6 +97,7 @@
 				    double price = rs.getDouble("proPrice");
 				    int menge = rs.getInt("proMenge");
 				    String beschreibung = rs.getString("proDesc");
+				    String ArtikelBild = rs.getString("proPic");
 				    %>
 				        <tr>
 				            <td><%= id %></td>
@@ -87,6 +105,7 @@
 				            <td><%= price %></td>
 				            <td><%= menge %></td>
 				            <td><%= beschreibung %></td>
+				            <td><%= ArtikelBild %></td>
 				        </tr>
 				    <%
 				}
