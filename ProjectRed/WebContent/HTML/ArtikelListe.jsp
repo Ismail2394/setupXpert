@@ -72,7 +72,7 @@
 						id="myFile" name="filename">
 				</div>
 			</div>
-			<input type="submit" value="Hinzufügen">
+			<input type="submit" value="Hinzufügen" id="submitButton">
 		</form>
 	</table>
 	
@@ -131,9 +131,13 @@
 					%>
 				</tbody>
 			</table>
+			
 		</div>
+	
 	</div>
+		
 	</div>
+	<input type="submit" value="Löschen" id="deleteButton">
 	<%@ include file="00_footer.html"%>
 </body>
 </html>
