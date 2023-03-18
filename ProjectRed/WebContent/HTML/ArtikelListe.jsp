@@ -50,20 +50,8 @@
 		stmt = conn.prepareStatement("SELECT * FROM products");
 		rs = stmt.executeQuery();
 	%>
-
-		<table>
-			<thead>
-				<tr>
-					<th>ID</th>
-					<th>Artikel</th>
-					<th>Preis</th>
-					<th>Menge</th>
-					<th>Beschreibung</th>
-					<th>Bildpfad</th>
-				</tr>
-			</thead>
-			<tbody>
-				<form action="ArtikelListe.jsp" method="post">
+	<table class="Artikelformular">
+<form action="ArtikelListe.jsp" method="post">
 					<div class="input-container">
 						<div class="input-field">
 							<label for="name">ArtikelName:</label>
@@ -88,6 +76,22 @@
 					</div>
 					<input type="submit" value="Hinzufügen">
 				</form>
+				</table>
+		<div id="table-wrapper">
+		<div id="table-scroll">
+		<table class="Artikelliste">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Artikel</th>
+					<th>Preis</th>
+					<th>Menge</th>
+					<th>Beschreibung</th>
+					<th>Bildpfad</th>
+				</tr>
+			</thead>
+			<tbody>
+				
 
 
 				<%
@@ -124,6 +128,8 @@
 			%>
 			</tbody>
 		</table>
+		</div>
+		</div>
 	<%@ include file="00_footer.html" %>
 </body>
 </html>
