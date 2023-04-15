@@ -1,3 +1,5 @@
+//Caglayan, Ismail 17.03.2023
+
 package servlet;
 
 import java.io.IOException;
@@ -55,7 +57,7 @@ public class erstelleKunde extends HttpServlet {
 			    pstmt.setString(7, form.getGeburtsdatum());
 			    pstmt.setString(8, form.getGeschlecht());
 			    pstmt.setString(9, form.geteMail());
-			    pstmt.setInt(10, form.getRolle());
+			    pstmt.setString(10, form.getRolle());
 			    pstmt.setString(11, form.getPasswort());
 					pstmt.executeUpdate();
 	
