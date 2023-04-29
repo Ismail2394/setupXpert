@@ -36,18 +36,19 @@
 			String ArtikelBild = request.getParameter("ArtikelBild");
 
 			stmt = conn.prepareStatement(
-			"INSERT INTO products (proName, proPrice, proMenge, proDesc, proPic) VALUES (?, ?, ?, ?, ?)");
+			"INSERT INTO products (proName, proMenge, proDesc, proPic, preis) VALUES (?, ?, ?, ?, ?)");
 			stmt.setString(1, name);
-			stmt.setDouble(2, price);
-			stmt.setInt(3, menge);
-			stmt.setString(4, beschreibung);
-			stmt.setString(5, ArtikelBild);
+			stmt.setInt(2, menge);
+			stmt.setString(3, beschreibung);
+			stmt.setString(4, ArtikelBild);
+			stmt.setDouble(5, price);
 			stmt.executeUpdate();
 		}
 
 		stmt = conn.prepareStatement("SELECT * FROM products");
 		rs = stmt.executeQuery();
 	%>
+	
 	<table class="Artikelformular">
 		<form action="ArtikelListe.jsp" method="post">
 			<div class="input-container">
@@ -76,6 +77,7 @@
 		</form>
 	</table>
 	
+	
 	<div id="border">
 	<div id="table-wrapper">
 		<div id="table-scroll">
@@ -98,7 +100,7 @@
 					while (rs.next()) {
 						int id = rs.getInt("proID");
 						String name = rs.getString("proName");
-						double price = rs.getDouble("proPrice");
+						double price = rs.getDouble("preis");
 						int menge = rs.getInt("proMenge");
 						String beschreibung = rs.getString("proDesc");
 						String ArtikelBild = rs.getString("proPic");

@@ -13,5 +13,7 @@
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/wolfv/Desktop/Web/WildFly/wildfly-preview-26.1.2.Final/modules/system/layers/base/jakarta/servlet/api/main/jakarta.servlet-api-5.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wolfv/Desktop/Web/WildFly/wildfly-preview-26.1.2.Final/modules/system/layers/base/jakarta/annotation/api/main/jakarta.annotation-api-2.0.0.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
