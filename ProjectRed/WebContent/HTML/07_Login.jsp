@@ -8,7 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Anmeldeformular</title>
-<link rel="stylesheet" href="../CSS/gesamt.css">
+<link rel="stylesheet" type="text/css" href="../CSS/gesamt.css">
 </head>
 <body>
 <%@ include file="00_header.html" %>

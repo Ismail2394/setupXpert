@@ -51,7 +51,17 @@
 	position: relative;
 }
 
+.liste li a::after{
+	content: '';
+	background: #ff3d00;
+	width: 0;
+	height: 2px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transition: width 0.5s
+}
 
-.main-liste{
-	margin: 0;
+.liste li a:hover::after{
+	width: 100%
 }
