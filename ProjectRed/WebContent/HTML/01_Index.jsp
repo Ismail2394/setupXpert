@@ -9,7 +9,9 @@
 </head>
 <body>
 
-<%@ include file="00_header.html" %>
+<% String enteredEmail = (String)session.getAttribute(“enteredEmail”); if(enteredEmail==null) { %> 
+<%@ include file=“00_header.html” %> <% } else { %> 
+<%@ include file=“00_headerLogin.html” %> <% } %>
 
 <%@ include file="00_footer.html" %>
 
