@@ -8,10 +8,11 @@
 <title>Index_JSP</title>
 </head>
 <body>
+session.setAttribute("eMail", enteredEmail);
 
-<% String enteredEmail = (String)session.getAttribute(“enteredEmail”); if(enteredEmail==null) { %> 
-<%@ include file=“00_header.html” %> <% } else { %> 
-<%@ include file=“00_headerLogin.html” %> <% } %>
+<% String enteredEmail = (String)session.getAttribute(“enteredEmail”); if(enteredEmail==null) 
+{ %> <%@ include file=“00_header.html” %> <% } else 
+{ %> <%@ include file=“00_headerLogin.html” %> <% } %>
 
 <%@ include file="00_footer.html" %>
 

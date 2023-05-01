@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-16">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.jboss.ide.eclipse.as.core.server.runtime.runtimeTarget/WildFly 27.0 Runtime">
@@ -13,7 +13,11 @@
 			<attribute name="owner.project.facets" value="jst.web"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="C:/Users/wolfv/Desktop/Web/WildFly/wildfly-preview-26.1.2.Final/modules/system/layers/base/jakarta/servlet/api/main/jakarta.servlet-api-5.0.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/wolfv/Desktop/Web/WildFly/wildfly-preview-26.1.2.Final/modules/system/layers/base/jakarta/annotation/api/main/jakarta.annotation-api-2.0.0.jar"/>
+=======
+	<classpathentry kind="lib" path="C:/Users/i_cag/Desktop/jstl-1.2.jar"/>
+>>>>>>> branch 'master' of https://github.com/Ismail2394/setupXpert.git
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

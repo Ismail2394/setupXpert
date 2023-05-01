@@ -30,7 +30,8 @@ public class erstelleKundeServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8"); // 
 		kunde form = new kunde();
 
-		
+		final RequestDispatcher dispatcher = request.getRequestDispatcher("html/1_outputdataRegistration.jsp");
+		dispatcher.forward(request, response);
 		
 		form.setVorname(request.getParameter("vorname"));
 		form.setNachname(request.getParameter("nachname"));
@@ -48,8 +49,7 @@ public class erstelleKundeServlet extends HttpServlet {
 		request.setAttribute("form", form);
 
 		
-		final RequestDispatcher dispatcher = request.getRequestDispatcher("html/1_outputdataRegistration.jsp");
-		dispatcher.forward(request, response);
+		
 	}
 	private void persist(kunde form) throws ServletException {
 		
