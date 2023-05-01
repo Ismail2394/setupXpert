@@ -1,60 +1,73 @@
 package beans;
 
 public class Artikel {
-  public int id;
-  public String name;
-  public double price;
-  public int menge;
-  public String beschreibung;
-  public String ArtikelBild;
+	public int id;
+	public String name;
+	public double price;
+	public int menge;
+	public String beschreibung;
+	public String artikelBild;
 
+	public Artikel() {
+		super();
+	}
 
+	public Artikel(Integer id, String name, Double price, Integer menge, String beschreibung, String artikelBild) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.price = price;
+		this.menge = menge;
+		this.beschreibung = beschreibung;
+		this.artikelBild = artikelBild;
 
-  public int getId() {
-    return id;
-  }
+	}
 
-  public void setId(int id) {
-    this.id = id;
-  }
+	public int getId() {
+		return id;
+	}
 
-  public String getName() {
-    return name;
-  }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-  public void setName(String name) {
-    this.name = name;
-  }
+	public String getName() {
+		return name;
+	}
 
-  public double getPrice() {
-    return price;
-  }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-  public void setPrice(double price) {
-    this.price = price;
-  }
+	public double getPrice() {
+		return price;
+	}
 
-  public int getMenge() {
-    return menge;
-  }
+	public void setPrice(double price) {
+		this.price = price;
+	}
 
-  public void setMenge(int menge) {
-    this.menge = menge;
-  }
+	public int getMenge() {
+		return menge;
+	}
 
-  public String getBeschreibung() {
-    return beschreibung;
-  }
+	public void setMenge(int menge) {
+		this.menge = menge;
+	}
 
-  public void setBeschreibung(String beschreibung) {
-    this.beschreibung = beschreibung;
-  }
+	public String getBeschreibung() {
+		return beschreibung;
+	}
 
-  public String getArtikelBild() {
-    return ArtikelBild;
-  }
+	public void setBeschreibung(String beschreibung) {
+		this.beschreibung = beschreibung;
+	}
 
-  public void setArtikelBild(String ArtikelBild) {
-    this.ArtikelBild = ArtikelBild;
-  }
+	public String getArtikelBild() {
+		return artikelBild;
+	}
+
+	public void setArtikelBild(String artikelBild) {
+		this.artikelBild = artikelBild;
+	}
 }
