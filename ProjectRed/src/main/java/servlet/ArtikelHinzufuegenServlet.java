@@ -1,5 +1,8 @@
 //Caglayan, Ismail 01.05.23
-
+/**
+ * Servlet welches genutzt wird um in der JSP "08.1_ArtikelListe.jsp" Artikel hinzufügen. Die Artikel werden anschließend in Echtzeit
+ * in einer Tabelle angezeigt.
+ */
 package servlet;
 
 import java.io.IOException;
@@ -16,7 +19,9 @@ import jakarta.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
 import beans.Artikel;
-
+/**
+ * Implementieren des Servlets "ArtikelHinzufuegenServlet"
+ */
 @WebServlet("/ArtikelHinzufuegenServlet")
 public class ArtikelHinzufuegenServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -45,15 +50,27 @@ public class ArtikelHinzufuegenServlet extends HttpServlet {
 		// Persistieren der Daten in der Datenbank
 		persist(form);
 
-		// Weiterleiten zur Erfolgsseite
+		/**
+		 * Das Formular wird hier an die JSP weitergegeben. In de JSP wird dann das Atribut "form" benutzt und damit weitergearbeitet.
+		 */
+		
 		request.setAttribute("form", form);
+		/**
+		 * Nach dem drücken auf den "Hinzufügen" button soll der Nutzer weiterhin auf der ArtikelListe.jsp bleiben, daher wird hier ein 
+		 * "sendDirect" definiert und auf die "08.1_ArtikelListe.jsp" hingewiesen.
+		 */
 		response.sendRedirect("./HTML/08.1_ArtikelListe.jsp");
 	}
-
+	/**
+	 * Hier beginnt die Methode zum Einfügen der Inhalte in die Datenbank.
+	 */
 	private void persist(Artikel form) throws ServletException {
 
 		String[] generatedKeys = new String[] { "proID" };
-
+		/**
+		 * Per SQL-Insert Anweisung werden die Attribute per getter-Methode in die Datenbank geschrieben. Die Attribute werden
+		 *  aus dem Formular "08.1_ArtikelListe.jsp" entnommen.
+		 */
 		try (Connection con = ds.getConnection();
 				PreparedStatement pstmt = con.prepareStatement(
 						"INSERT INTO products (proName, proPrice, proMenge, proDesc, proPic) VALUES (?, ?, ?, ?, ?)",

@@ -1,32 +1,36 @@
 <!--Caglayan, Ismail 01.05.23-->
 <%@ page import="java.sql.*"%>
 <%@ page import="javax.naming.InitialContext"%>
-<jsp:useBean id="ArtikelListeServlet"
-	class="servlet.ArtikelListeServlet" scope="page" />
-<%@ page import="javax.sql.DataSource"%>
-<%@ page import="servlet.ArtikelListeServlet"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page import="servlet.*"%>
 <%@ page import="beans.*"%>
 <%@ page import="java.util.ArrayList"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page import="javax.sql.DataSource"%>
+<%@ page import="servlet.ArtikelListeServlet"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
+<!--Taglibs, werden benötigt für die "forEach" Schleife -->
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<!--Zuweisung an die JSP, welches Servlet genutzt werden soll -->
+<jsp:useBean id="ArtikelListeServlet"
+class="servlet.ArtikelListeServlet" scope="page" />
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Artikel Liste</title>
-
+<!--Einbinden der CSS muss in diesem Fall über pageContext erfolgen, da sonst das Servlet die CSS dateien nicht "erkennt"-->
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/CSS/gesamt.css">
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/CSS/ArtikelListe.css">
-
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 </head>
 <body>
+<!--Einbinden der Jquery Bibliothek. Benötigt für den Ajax Code-->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
 		type="text/javascript"></script>
 	<script type="text/javascript" src="../Scripts/listenAufruf.js">
@@ -34,7 +38,6 @@
 	</script>
 
 	<!--Ab hier beginnt die ArtikelListe-->
-
 	<div id="border">
 		<div id="table-wrapper">
 			<div id="table-scroll">
@@ -42,6 +45,7 @@
 					<thead>
 
 						<tr>
+						<!--Definition der Spaltennamen-->
 							<th>ID</th>
 							<th>Artikel</th>
 							<th>Preis</th>
@@ -51,10 +55,10 @@
 						</tr>
 					</thead>
 					<tbody class="ListenInhalt" id="ListenInhalt">
-
-
-						<%-- Iterieren über die Liste und Ausgabe der Werte --%>
-						<c:forEach var="artikel" items="${Produktliste}">
+						<!--Schleife geht jedes Produkt durch und gibt die Attribute "id,name,price,menge,beschreibung,artikelBild" aus-->
+							<!--"Produktliste ist das Attribut, was in "ArtikelListeServlet.java" an die JSP übergeben wird, siehe:-->
+							<!--"request.setAttribute("Produktliste", lp);-->
+						<c:forEach var="artikel" items="${Produktliste}">	
 
 							<tr>
 								<td>${artikel.id}</td>
@@ -62,25 +66,14 @@
 								<td>${artikel.price}</td>
 								<td>${artikel.menge}</td>
 								<td>${artikel.beschreibung}</td>
-
 								<td>${artikel.artikelBild}</td>
-
-
 							</tr>
 						</c:forEach>
-
-
 					</tbody>
-
 				</table>
-
 			</div>
-
 		</div>
-
 	</div>
-
-
 </body>
 </html>
 
