@@ -7,10 +7,8 @@ import jakarta.annotation.Resource;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
-import javax.naming.InitialContext;
+import jakarta.servlet.Servlet;
 
 @WebServlet("/ArtikelListeServlet")
 public class ArtikelListeServlet extends HttpServlet {

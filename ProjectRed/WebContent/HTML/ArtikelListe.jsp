@@ -43,10 +43,11 @@
 			stmt.setString(4, beschreibung);
 			stmt.setString(5, ArtikelBild);
 			stmt.executeUpdate();
+		
 		}
-
 		stmt = conn.prepareStatement("SELECT * FROM products");
 		rs = stmt.executeQuery();
+		
 	%>
 	<table class="Artikelformular">
 		<form action="ArtikelListe.jsp" method="post">
