@@ -2,25 +2,21 @@
 <%@ page import="java.sql.*"%>
 <%@ page import="javax.naming.InitialContext"%>
 <%@ page import="servlet.*"%>
-<%@ page import="beans.*"%>
+<%@ page import="beans.Artikel"%>
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="javax.sql.DataSource"%>
 <%@ page import="servlet.ArtikelListeServlet"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
 <!--Taglibs, werden benötigt für die "forEach" Schleife -->
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 <!--Zuweisung an die JSP, welches Servlet genutzt werden soll -->
-<jsp:useBean id="ArtikelListeServlet"
-class="servlet.ArtikelListeServlet" scope="page" />
+
 
 <!DOCTYPE html>
 <html>
 <head>
+<!--<script src="../Scripts/artikelLoeschen.js" type="text/javascript"></script>-->
 <meta charset="UTF-8">
 <title>Artikel Liste</title>
 <!--Einbinden der CSS muss in diesem Fall über pageContext erfolgen, da sonst das Servlet die CSS dateien nicht "erkennt"-->
@@ -31,13 +27,13 @@ class="servlet.ArtikelListeServlet" scope="page" />
 </head>
 <body>
 <!--Einbinden der Jquery Bibliothek. Benötigt für den Ajax Code-->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-		type="text/javascript"></script>
+	
 	<script type="text/javascript" src="../Scripts/listenAufruf.js">
 		
 	</script>
 
 	<!--Ab hier beginnt die ArtikelListe-->
+	<div id="random">
 	<div id="border">
 		<div id="table-wrapper">
 			<div id="table-scroll">
@@ -60,7 +56,7 @@ class="servlet.ArtikelListeServlet" scope="page" />
 							<!--"request.setAttribute("Produktliste", lp);-->
 						<c:forEach var="artikel" items="${Produktliste}">	
 
-							<tr>
+							<tr onclick="selectRow(this.parentNode)">
 								<td>${artikel.id}</td>
 								<td>${artikel.name}</td>
 								<td>${artikel.price}</td>
@@ -73,8 +69,13 @@ class="servlet.ArtikelListeServlet" scope="page" />
 				</table>
 			</div>
 		</div>
+		
 	</div>
+	<input type="submit" value="Löschen" id="deleteButton">
+	</div>
+	
 </body>
+
 </html>
 
 

@@ -4,15 +4,11 @@
 <%@ page import="javax.sql.DataSource"%>
 <%@ page import="servlet.ArtikelListeServlet"%>
 <%@ page import="servlet.*"%>
-<%@ page import="beans.*"%>
+<%@ page import="beans.Artikel"%>
 <%@ page import="java.util.ArrayList"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
-<!--Taglibs, werden benötigt für die "forEach" Schleife (siehe ArtikelTabelle.jsp)-->
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+
+
 
 
 <!--Einbinden der CSS muss in diesem Fall über pageContext erfolgen, da sonst das Servlet die CSS dateien nicht "erkennt"-->
@@ -28,12 +24,6 @@
 <title>Artikel Liste</title>
 </head>
 <body>
-<!--Einbinden der Jquery Bibliothek. Benötigt für den Ajax Code-->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-		type="text/javascript"></script>
-	<script type="text/javascript" src="../Scripts/listenAufruf.js">
-		
-	</script>
 	<div id="ergebnis"></div>
 	<%@ include file="00_header.html"%>
 	<h1>Artikel Liste</h1>
@@ -73,7 +63,7 @@
 	<!--Die ArtikelListe wird von der anderen JSP eingefügt.-->
 	<%@ include file="08.2_ArtikelTabelle.jsp"%>
 <!------Der Button zum Löschen von Artikeln, Funktionalität wird noch hinzgefügt, momentan keine Funktion---------->	
-	<input type="submit" value="Löschen" id="deleteButton">
+	
 	<%@ include file="00_footer.html"%>
 </body>
 </html>

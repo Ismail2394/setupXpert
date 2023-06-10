@@ -1,3 +1,20 @@
+tr.selected {
+  background-color: yellow;
+}
+.selected-row {
+  background-color: yellow; /* Hintergrundfarbe für markierte Zeilen */
+}
+
+.selected-row:hover {
+  background-color: orange; /* Hintergrundfarbe für markierte Zeilen beim Hovern */
+}
+tr.selected {
+  background-color: yellow; /* Hintergrundfarbe für markierte Zeilen */
+}
+
+tr.selected-row:hover {
+  background-color: orange; /* Hintergrundfarbe für markierte Zeilen beim Hovern */
+}
 .input-field {
   display: inline-block;
   margin-right: 20px;

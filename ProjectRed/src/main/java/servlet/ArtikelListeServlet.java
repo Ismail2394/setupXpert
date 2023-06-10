@@ -44,7 +44,7 @@ public class ArtikelListeServlet extends HttpServlet {
 //Aufrufen der Funktion "produkteAbfragen" und Zuweisung der Artikel an die Liste "lp"
 		
 		List<Artikel> lp = produkteAbfragen();
-		
+		System.out.println("Anzahl der Artikel: " + lp.size()); // Konsolenausgabe
 		/*
 		Das Objekt wird per Request an die JSP übergeben, in der JSP muss(!) das Objekt "Produktliste" genutzt werden, um die Attribute (name,price,usw.)
 		abzufragen.
