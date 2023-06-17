@@ -19,4 +19,14 @@
     <servlet-name>ArtikelListeServlet</servlet-name>
     <url-pattern>/ArtikelListeServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ArtikelHinzufuegenServlet</display-name>
+    <servlet-name>ArtikelHinzufuegenServlet</servlet-name>
+    <servlet-class>servlet.ArtikelHinzufuegenServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ArtikelHinzufuegenServlet</servlet-name>
+    <url-pattern>/ArtikelHinzufuegenServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

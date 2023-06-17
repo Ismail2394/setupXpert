@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+p.spacer{
+	padding-left:35px;
+}
+p.spacer2{
+	padding-left:55px;
+}
+
+a.link-spacer{
+	padding: 10px 10px;
+	word-wrap: normal;
+}

@@ -33,27 +33,35 @@
   	width: 100%;
   	height: 100px;
 }
-}
+
 
 .liste{
-	
-	padding: 15px;
-	margin: 5px;
+	padding: 28px 0;
 }
 
 
 .liste li{
 	display: inline-block;
 	margin: 0 15 px;
-	list-style-type: none;
 }
 
 .liste li a{
-	padding: 20px;
+	padding: 5p 0;
 	text-decoration: none;
+	position: relative;
 }
 
+.liste li a::after{
+	content: '';
+	background: #ff3d00;
+	width: 0;
+	height: 2px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transition: width 0.5s
+}
 
-.main-liste{
-	margin: 0;
+.liste li a:hover::after{
+	width: 100%
 }

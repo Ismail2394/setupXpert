@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>KontaktJSP</title>
+<title>Kontakt</title>
 <link rel="stylesheet" type="text/css" href="../CSS/gesamt.css">
 </head>
 <body>
