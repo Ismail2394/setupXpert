@@ -20,7 +20,7 @@
 
 
 <button class = "buttondesign"> Kunden verwalten</button>
-<button onclick="window.location.href = 'produktHinzufuegen.html';" class = "buttondesign"  type="button"> Produkte verwalten</button>
+<button onclick="window.location.href = '08.1_ArtikelListe.jsp';" class = "buttondesign"  type="button"> Produkte verwalten</button>
 <button onclick="window.location.href = 'produktHinzufuegen.html';" class = "buttondesign"  type="button"> Kontaktverwaltung</button>
 <button onclick="window.location.href = 'produktHinzufuegen.html';" class = "buttondesign"  type="button"> Rollenverwaltung</button>
         
